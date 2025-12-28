@@ -13,19 +13,19 @@
         let numbers = [25251,52213,52768,60550,66304,67146,15155,23360,18069]
         document.getElementById('div').textContent = output
         let x = 0
-        while(!numbers.includes(output.join(''))) {
-          x ++;
-          setTimeout(()=> {
-            let numDigits = parseInt(document.getElementById('amount').value)
-            for(let i=0;i< numDigits;i++) {
-                digit1=parseInt(Math.random() * 9)
-                if (i === 0) {
-                  digit1 ++;
-                }
-                output.push(digit1)
-            }
-            document.getElementById('div').textContent = output.join('')
-          },100 * x);
+        setTimeout(()=> {
+          let numDigits = parseInt(document.getElementById('amount').value)
+          for(let i=0;i< numDigits;i++) {
+              digit1=parseInt(Math.random() * 9)
+              if (i === 0) {
+                digit1 ++;
+              }
+              output.push(digit1)
+          }
+          document.getElementById('div').textContent = output.join('')
+        },100);
+        if(!numbers.includes(output.join(''))) {
+          run();
         }
       }
     </script>
