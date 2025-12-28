@@ -14,6 +14,9 @@
         let numDigits = parseInt(document.getElementById('amount').value)
         for(let i=0;i< numDigits;i++) {
             digit1=parseInt(Math.random() * 9)
+            if (i === 0) {
+              digit1 ++;
+            }
             output.push(digit1)
         }
         document.getElementById('div').textContent = output.join('')
