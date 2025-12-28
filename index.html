@@ -4,6 +4,7 @@
     
   </head>
   <body>
+    <div id="div"></div>
     <script>
       let output = []
       let numDigits = 10
@@ -11,7 +12,7 @@
         digit1=Math.Random()* 9
           output.push(digit1)
       }
-      console.log(output.join('')
+      document.getElementById('div').textContent = output.join('')
     </script>
   </body>
 </html>
